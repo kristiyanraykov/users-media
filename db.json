@@ -1,0 +1,26 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "John"
+    },
+    {
+      "name": "Kathryn Dach V",
+      "id": 2
+    },
+    {
+      "name": "Ms. Wm Graham I",
+      "id": 3
+    },
+    {
+      "name": "Ralph Kovacek DVM",
+      "id": 4
+    },
+    {
+      "name": "Ora McDermott",
+      "id": 5
+    }
+  ],
+  "albums": [],
+  "photos": []
+}
