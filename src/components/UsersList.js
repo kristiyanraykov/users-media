@@ -1,29 +1,26 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
+import { useThunk } from '../hooks/useThunk';
 import { fetchUsers, addUser } from '../store';
 import Button from './Button';
 import Skeleton from './Skeleton';
 
+
+
 function UsersList() {
-  const [isLoadingUsers, setIsLoadingUsers] = useState(false);
-  const [loadingUsersError, setLoadingUsersError] = useState(null);
-  const dispatch = useDispatch();
+  const [doFetchUsers, isLoadingUsers, loadingUsersError] =
+    useThunk(fetchUsers);
+  const [doCreateUser, isCreatingUser, creatingUserError] = useThunk(addUser);
+
   const { data } = useSelector((state) => state.users);
+
   useEffect(() => {
-    setIsLoadingUsers(true);
-    dispatch(fetchUsers()) // .then() always triggers, even if the promise is rejected.
-      .unwrap() // This creates a new promise that follows the conventional rules.
-      .catch((error) => {
-        setLoadingUsersError(error);
-      })
-      .finally(() => {
-        setIsLoadingUsers(false);
-      });
-  }, [dispatch]);
+    doFetchUsers();
+  }, [doFetchUsers]);
 
   const handleUserAdd = () => {
-    dispatch(addUser());
+    doCreateUser();
   };
 
   if (isLoadingUsers) {
