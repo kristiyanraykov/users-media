@@ -21,6 +21,32 @@
       "id": 5
     }
   ],
-  "albums": [],
+  "albums": [
+    {
+      "id": 10,
+      "title": "Hiking trip",
+      "userId": 1
+    },
+    {
+      "userId": 1,
+      "title": "Gorgeous Bronze Soap",
+      "id": 11
+    },
+    {
+      "userId": 1,
+      "title": "Generic Cotton Cheese",
+      "id": 12
+    },
+    {
+      "userId": 1,
+      "title": "Electronic Metal Soap",
+      "id": 13
+    },
+    {
+      "userId": 2,
+      "title": "Incredible Cotton Chips",
+      "id": 14
+    }
+  ],
   "photos": []
 }
