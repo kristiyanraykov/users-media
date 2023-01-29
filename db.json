@@ -46,7 +46,28 @@
       "userId": 2,
       "title": "Incredible Cotton Chips",
       "id": 14
+    },
+    {
+      "userId": 1,
+      "title": "Licensed Steel Sausages",
+      "id": 15
     }
   ],
-  "photos": []
+  "photos": [
+    {
+      "albumId": 10,
+      "url": "https://loremflickr.com/150/150/abstract?lock=64598",
+      "id": 1
+    },
+    {
+      "albumId": 10,
+      "url": "https://loremflickr.com/150/150/abstract?lock=18673",
+      "id": 2
+    },
+    {
+      "albumId": 10,
+      "url": "https://loremflickr.com/150/150/abstract?lock=53514",
+      "id": 3
+    }
+  ]
 }
